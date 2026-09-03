@@ -44,8 +44,9 @@ No root needed. Everything installs into your home directory.
 From a release package:
 
 ```bash
-curl -fLO https://github.com/RobertAlexanderH/cinnamon-workspace-names-applet/releases/latest/download/cinnamon-workspace-names-applet.zip
-unzip cinnamon-workspace-names-applet.zip
+curl -fLO https://github.com/CurbSoftware/cinnamon-workspace-names-applet/releases/latest/download/cinnamon-workspace-names-applet.zip
+unzip -o cinnamon-workspace-names-applet.zip
+mkdir -p ~/.local/share/cinnamon/applets
 rm -rf ~/.local/share/cinnamon/applets/cinnamon-workspace-names-applet@curbsoftware
 cp -r cinnamon-workspace-names-applet@curbsoftware/files/cinnamon-workspace-names-applet@curbsoftware \
    ~/.local/share/cinnamon/applets/cinnamon-workspace-names-applet@curbsoftware
@@ -54,8 +55,9 @@ cp -r cinnamon-workspace-names-applet@curbsoftware/files/cinnamon-workspace-name
 Or straight from git:
 
 ```bash
-git clone https://github.com/RobertAlexanderH/cinnamon-workspace-names-applet.git
+git clone https://github.com/CurbSoftware/cinnamon-workspace-names-applet.git || git -C cinnamon-workspace-names-applet pull
 cd cinnamon-workspace-names-applet
+mkdir -p ~/.local/share/cinnamon/applets
 rm -rf ~/.local/share/cinnamon/applets/cinnamon-workspace-names-applet@curbsoftware
 cp -r files/cinnamon-workspace-names-applet@curbsoftware \
    ~/.local/share/cinnamon/applets/cinnamon-workspace-names-applet@curbsoftware
